@@ -1,4 +1,7 @@
 --- 
-title: "Home" 
+title: "R-Ladies Queretaro" 
 --- 
-Hello, Website! Welcome to RladiesQro space
+
+<img src="Fig/logo_Rladies_Qro.png" style="width:25%; margin-right: 20px" align="left">
+
+Hello, Website! Welcome to RladiesQro space se cambia
