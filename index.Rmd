@@ -2,6 +2,7 @@
 title: "R-Ladies Queretaro" 
 --- 
 
-<img src="Fig/logo_Rladies_Qro.png" style="width:25%; margin-right: 20px" align="left">
+<img src="Fig/logo_Rladies_Qro.png" style="width:25%; margin-right: 20px" align="right">
 
-Hello, Website! Welcome to RladiesQro space se cambia
+Este espacio es para R-ladies Queretaro, puedes seguirnos también en nuestro [meetup](https://www.meetup.com/en-AU/rladies-queretaro/) 
+
