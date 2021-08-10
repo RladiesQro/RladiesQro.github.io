@@ -20,12 +20,13 @@ editor_options:
 
 ```{r setup, include=FALSE}
 # https://rladiesqro.github.io/sesiones/2021TIB_Rladies/slides/main.html
-library("lubridate")
+library(lubridate)
 library(wordcloud)
-library(wordcloud2)
+library(gganimate)
+#library(wordcloud2)
 library(tm)
-library("meetupr")
-library("raster")
+library(meetupr)
+library(raster)
 library(knitr)                              # paquete que trae funciones utiles para R Markdown
 library(tidyverse)                          # paquete que trae varios paquetes comunes en el tidyverse
 library(icon)                               # paquete para iconos
@@ -259,13 +260,19 @@ df <- data.frame(Date = as.Date(rladies$created), count = 1) %>%
   summarise(count_ymonth = sum(count, na.rm = TRUE)) %>%
   mutate(cum_sum = cumsum(count_ymonth))
 
-ggplot(data = df, aes(x = dategroup, y = cum_sum)) +
+cap_anim <- ggplot(data = df, aes(x = dategroup, y = cum_sum)) +
   geom_bar(stat = "identity", color = "#88398A", fill = "#88398A", binwidth = 1) +
-  theme_bw(10) + xlab("") + ylab("Número de capítulos") +
+  theme_bw(14) + xlab("") + ylab("Número de capítulos") +
   #theme(text = element_text(family="amatic-sc",size = 24)) +
   ggtitle("Crecimiento de R-Ladies Global") +
   theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) +
+  transition_reveal(cum_sum)+
   scale_x_discrete(breaks = df$dategroup[seq(1, length(df$dategroup), by = 2)])
+
+
+gganimate::animate(cap_anim,
+        width = 900, height = 500,end_pause = 60,
+        fps = 30)
 
 ```
 
@@ -352,14 +359,18 @@ df <- rladies %>%
   filter(country == "MX") %>% 
   arrange(-members)
 
-df %>%
+anim <- df %>%
  ggplot() +
  aes(x = reorder(city,members), weight = members) +
   labs(x = "Ciudad", y = "Número de participantes") +
   geom_bar(fill = "#440154") +
    coord_flip() +
-  theme_classic(16)
+   transition_reveal(members)+
+  theme_classic(18)
 
+gganimate::animate(anim,
+        width = 900, height = 500,end_pause = 60,
+        fps = 30)
 
 ```
 
@@ -367,18 +378,13 @@ df %>%
 
 # Palabras en los titulos
 
-```{r  message=FALSE, warning=FALSE, include=FALSE}
+```{r eval=FALSE}
 urlname <- df %>% 
   filter(urlname != "rladies-pachuca") %>% 
   select(urlname) 
 
 events <- urlname$urlname %>% 
   purrr::map_df(get_events, "past")
-
-events %>% 
-  arrange(desc(time))
-
-
 
 text <- paste(events$name, collapse  = " ")
 docs <- Corpus(VectorSource(text))
@@ -398,20 +404,15 @@ words <- sort(rowSums(matrix),decreasing=TRUE)
 df_docs <- data.frame(word = names(words),freq=words)
 
 set.seed(1234) # for reproducibility 
-# my_graph <- wordcloud2(data=df_docs, size=1.6)
-# htmlwidgets::saveWidget(my_graph,here::here("2021TIB_Rladies/slides/img/cloud.html"),selfcontained = F)
-# 
-# webshot::webshot(here::here("2021TIB_Rladies/slides/img/cloud.html"),here::here("2021TIB_Rladies/slides/img/cloud.png"), delay =20, vwidth = 480, vheight=480)
+my_graph <- wordcloud2(data=df_docs, size=1)
+htmlwidgets::saveWidget(my_graph,here::here("additional/2021TIB_Rladies/img/cloud.html"),selfcontained = F)
+
+# webshot::webshot(here::here("additional/2021TIB_Rladies/img/cloud.html"),here::here("additional/2021TIB_Rladies/img/cloud.png"), delay =20, vwidth = 480, vheight=480)
 
 ```
 
-```{r fig.height=3.5}
-wordcloud(words = df_docs$word, freq = df_docs$freq,
-          random.order=FALSE, 
-          min.freq = 1,  
-          rot.per=0.35,            
-          colors=brewer.pal(8, "Dark2")
-          )
+```{r fig.align='center'}
+knitr::include_graphics("img/wcloud.png", dpi = 5)
 ```
 
 ---
