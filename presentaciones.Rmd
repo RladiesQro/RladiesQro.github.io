@@ -4,7 +4,7 @@
 Algunas presentaciones que hemos realizado:
 
 
-- [TIB 2021]("https://rladiesqro.github.io/additional/2021TIB_Rladies/main.html") | 10 de Agosto de 2021 | Ana Betty
+- [TIB 2021]("additional/2021TIB_Rladies/main.html") | 10 de Agosto de 2021 | Ana Betty
 
 
 
