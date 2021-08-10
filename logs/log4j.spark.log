@@ -1,0 +1,49 @@
+19/09/22 14:19:21 INFO RSCDriver: Connecting to: 192.168.1.70:10000
+19/09/22 14:19:21 INFO RSCDriver: Starting RPC server...
+19/09/22 14:19:22 INFO RpcServer: Connected to the port 10001
+19/09/22 14:19:22 WARN RSCConf: Your hostname, 192.168.1.70, resolves to a loopback address, but we couldn't find any external IP address!
+19/09/22 14:19:22 WARN RSCConf: Set livy.rsc.rpc.server.address if you need to bind to another address.
+19/09/22 14:19:22 INFO RSCDriver: Received job request 7e27f4a7-5969-41e1-b757-671538d292f0
+19/09/22 14:19:22 INFO RSCDriver: SparkContext not yet up, queueing job request.
+19/09/22 14:20:31 INFO RSCDriver: Connecting to: 192.168.1.70:10000
+19/09/22 14:20:31 INFO RSCDriver: Starting RPC server...
+19/09/22 14:20:31 INFO RpcServer: Connected to the port 10001
+19/09/22 14:20:32 WARN RSCConf: Your hostname, 192.168.1.70, resolves to a loopback address, but we couldn't find any external IP address!
+19/09/22 14:20:32 WARN RSCConf: Set livy.rsc.rpc.server.address if you need to bind to another address.
+19/09/22 14:20:32 INFO RSCDriver: Received job request a0c7bdfd-ad44-4436-b51a-c03ee0cf1b4e
+19/09/22 14:20:32 INFO RSCDriver: SparkContext not yet up, queueing job request.
+19/09/22 14:21:14 INFO RSCDriver: Connecting to: 192.168.1.70:10000
+19/09/22 14:21:14 INFO RSCDriver: Starting RPC server...
+19/09/22 14:21:14 INFO RpcServer: Connected to the port 10001
+19/09/22 14:21:14 WARN RSCConf: Your hostname, 192.168.1.70, resolves to a loopback address, but we couldn't find any external IP address!
+19/09/22 14:21:14 WARN RSCConf: Set livy.rsc.rpc.server.address if you need to bind to another address.
+19/09/22 14:21:15 INFO RSCDriver: Received job request 92a84b6e-36eb-4815-b0ab-626fe2a8ce13
+19/09/22 14:21:15 INFO RSCDriver: SparkContext not yet up, queueing job request.
+19/09/22 14:21:34 INFO RSCDriver: Connecting to: 192.168.1.70:10000
+19/09/22 14:21:34 INFO RSCDriver: Starting RPC server...
+19/09/22 14:21:34 INFO RpcServer: Connected to the port 10001
+19/09/22 14:21:34 WARN RSCConf: Your hostname, 192.168.1.70, resolves to a loopback address, but we couldn't find any external IP address!
+19/09/22 14:21:34 WARN RSCConf: Set livy.rsc.rpc.server.address if you need to bind to another address.
+19/09/22 14:21:34 INFO RSCDriver: Received job request c644d951-1b16-4003-bef9-af6cae0bbde1
+19/09/22 14:21:34 INFO RSCDriver: SparkContext not yet up, queueing job request.
+19/09/22 14:35:28 INFO RSCDriver: Connecting to: 192.168.1.70:10000
+19/09/22 14:35:28 INFO RSCDriver: Starting RPC server...
+19/09/22 14:35:28 INFO RpcServer: Connected to the port 10001
+19/09/22 14:35:28 WARN RSCConf: Your hostname, 192.168.1.70, resolves to a loopback address, but we couldn't find any external IP address!
+19/09/22 14:35:28 WARN RSCConf: Set livy.rsc.rpc.server.address if you need to bind to another address.
+19/09/22 14:35:29 INFO RSCDriver: Received job request 08b8c7b9-1655-4000-b297-424bf778e2b3
+19/09/22 14:35:29 INFO RSCDriver: SparkContext not yet up, queueing job request.
+19/09/22 14:52:20 INFO RSCDriver: Connecting to: 192.168.1.70:10000
+19/09/22 14:52:20 INFO RSCDriver: Starting RPC server...
+19/09/22 14:52:20 INFO RpcServer: Connected to the port 10001
+19/09/22 14:52:20 WARN RSCConf: Your hostname, 192.168.1.70, resolves to a loopback address, but we couldn't find any external IP address!
+19/09/22 14:52:20 WARN RSCConf: Set livy.rsc.rpc.server.address if you need to bind to another address.
+19/09/22 14:52:20 INFO RSCDriver: Received job request 027bde45-1446-4cd1-8440-4a4be6528249
+19/09/22 14:52:20 INFO RSCDriver: SparkContext not yet up, queueing job request.
+19/09/22 15:14:46 INFO RSCDriver: Connecting to: 192.168.1.70:10000
+19/09/22 15:14:46 INFO RSCDriver: Starting RPC server...
+19/09/22 15:14:47 INFO RpcServer: Connected to the port 10001
+19/09/22 15:14:47 WARN RSCConf: Your hostname, 192.168.1.70, resolves to a loopback address, but we couldn't find any external IP address!
+19/09/22 15:14:47 WARN RSCConf: Set livy.rsc.rpc.server.address if you need to bind to another address.
+19/09/22 15:14:47 INFO RSCDriver: Received job request 7dc9c740-6160-4d5e-8ba0-3ed201d89a92
+19/09/22 15:14:47 INFO RSCDriver: SparkContext not yet up, queueing job request.
