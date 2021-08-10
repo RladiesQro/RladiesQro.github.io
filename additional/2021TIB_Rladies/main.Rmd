@@ -374,17 +374,49 @@ gganimate::animate(anim,
 
 ```
 
+
 ---
+# Algunos de los eventos pasados
 
-# Palabras en los titulos
 
-```{r eval=FALSE}
+
+```{r fig.align='center', out.width="70%"}
+knitr::include_graphics("img/jbryan.png")
+```
+
+---
+# Algunos de los eventos pasados
+
+
+
+```{r fig.align='center', out.width="30%"}
+knitr::include_graphics("img/jbryan.png")
+```
+
+
+
+```{r include=FALSE}
 urlname <- df %>% 
   filter(urlname != "rladies-pachuca") %>% 
   select(urlname) 
 
 events <- urlname$urlname %>% 
   purrr::map_df(get_events, "past")
+```
+
+
+```{r eventos}
+knitr::kable(sample(events$name), col.names = "Eventos") %>%
+  kableExtra::kable_styling(font_size = 16)
+```
+
+
+
+---
+
+# Palabras en los titulos
+
+```{r eval=FALSE}
 
 text <- paste(events$name, collapse  = " ")
 docs <- Corpus(VectorSource(text))
@@ -418,6 +450,15 @@ knitr::include_graphics("img/wcloud.png", dpi = 5)
 ---
 
 # Primer encuentro de R-ladies MX
+
+```{r out.width="80%", fig.align='center'}
+knitr::include_graphics("https://github.com/RladiesMX/rladiesmxsource/blob/master/assets/images/rladiesmx.jpeg?raw=true")
+```
+
+
+---
+
+# CDSB & R-ladies MX
 
 ```{r fig.height=4, fig.align='center'}
 # tweetrmd::tweet_screenshot(
